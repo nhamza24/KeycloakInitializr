@@ -8,8 +8,9 @@ services:
         KEYCLOAK_ADMIN: admin
         KEYCLOAK_ADMIN_PASSWORD: admin
     volumes:
-      - .\keycloak-config:/config
-      - .\keycloak-config\keycloak_config.json:/opt/keycloak/data/import/keycloak_config.json:ro
+      - ./keycloak-config:/config
+      - ./keycloak-config/TCM-realm.json:/opt/keycloak/data/import/TCM-realm.json:ro
+      - ./keycloak-config:/tmp/export
     ports:
       - "8080:8080"
     entrypoint: '/opt/keycloak/bin/kc.sh start-dev --import-realm'
