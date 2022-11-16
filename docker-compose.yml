@@ -14,11 +14,3 @@ services:
       - "8080:8080"
     entrypoint: '/opt/keycloak/bin/kc.sh start-dev --import-realm'
 
-  endpoint:
-    container_name: backendmock
-    image: 'endpoint'
-    build:
-      context: .
-      dockerfile: DockerfileEndpoint
-    ports:
-      - "8042:8042"

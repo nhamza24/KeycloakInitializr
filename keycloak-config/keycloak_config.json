@@ -116,11 +116,7 @@
         ]
       }
     }
-  ],
-  "eventsListeners": [
-    "keycloak-to-stc_tcm",
-    "jboss-logging"
   ]
-}
+ }
 
 
